@@ -125,6 +125,7 @@ img {
   font-size: 24px;
 }
 </style>
+<script src="https://api.countapi.xyz/hit/florin-pop.com/visits?callback=liveViews" async></script>
 </head>
 <body>
 <div class="w3-row-padding">
@@ -134,6 +135,7 @@ img {
   <a href="//t.me/grup_anime_indo">Group</a>
   <a href="//t.me/jksubindo">Channel</a>
 </div>
+<span id="visits"></span> users.
 <h1>ERRUUU</h1>
 <img class="w3-card-4" alt='erruuu' src="https://telegra.ph/file/aa009465a339e5b8e1daa.jpg"/>
 <p>Tes blabla blabla</p>
@@ -171,6 +173,11 @@ function openNav() {
 }
 function closeNav() {
   document.getElementById("navBawah").style.height = "0%";
+}
+
+// user views
+function liveViews(response) {
+    document.getElementById('visits').innerText = response.value;
 }
 </script>
 </body>
