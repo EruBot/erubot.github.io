@@ -134,7 +134,6 @@ img {
   <a href="//t.me/grup_anime_indo">Group</a>
   <a href="//t.me/jksubindo">Channel</a>
 </div>
-<span class="post-view" data-id="9999985887654321234"><i class="fa fa-user"></i> <span class="view-load" id="postviews"><i class fa fa-spinner></i></span> Users</span>
 <h1>ERRUUU</h1>
 <img class="w3-card-4" alt='erruuu' src="https://telegra.ph/file/aa009465a339e5b8e1daa.jpg"/>
 <p>Tes blabla blabla</p>
@@ -173,18 +172,6 @@ function openNav() {
 function closeNav() {
   document.getElementById("navBawah").style.height = "0%";
 }
-</script>
-<script src="//cdn.firebase.com/js/client/2.2.1/firebase.js" type="text/javascript"></script>
-<script type="text/javascript">
-$.each($(".post-view[data-id]"), function(a, e) {
-var l = $(e).parent().find("#postviews").addClass("view-load"),
-i = new Firebase("https://kumapoi-default-rtdb.firebaseio.com/pages/id/" + $(e).attr("data-id"));
-        i.once("value", function(a) {
-            var n = a.val(),
-                t = !1;
-            null == n && (n = {}, n.value = 0, n.url = window.location.href, n.id = $(e).attr("data-id"), t = !0), l.removeClass("view-load").text(n.value), n.value++, "/" != window.location.pathname && (t ? i.set(n) : i.child("value").set(n.value))
-        })
-    });
 </script>
 </body>
 </html>
