@@ -20,7 +20,48 @@ img {
   width: 100%;
 }
 
-/* Nav */
+/* nav atas */
+
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+/* Nav bawah */
 
 .overlay {
   height: 0%;
@@ -83,16 +124,16 @@ img {
   text-align: center;
   font-size: 24px;
 }
-
-.bawah {
-  width: 100%;
-  height: 100%;
-}
 </style>
 </head>
 <body>
 <div class="w3-row-padding">
-<div class="bawah w3-card-4">
+<div class="w3-card-4">
+<div class="w3-card-4" id="navAtas">
+  <a href="/">Home</a>
+  <a href="//t.me/grup_anime_indo">Group</a>
+  <a href="//t.me/jksubindo">Channel</a>
+</div>
 <h1>ERRUUU</h1>
 <img class="w3-card-4" src="https://telegra.ph/file/aa009465a339e5b8e1daa.jpg"/>
 <p>Tes blabla blabla</p>
@@ -100,7 +141,7 @@ img {
 <div class="footerku">
 <p onclick="openNav()"><i class="fa fa-home"></i></p>
 </div>
-<div id="myNav" class="overlay">
+<div id="navBawah" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <div class="overlay-content">
     <a href="//t.me/erruuu" target="_blank">MyTelegram</a>
@@ -112,12 +153,24 @@ img {
 </div>
 </div>
 <script>
-function openNav() {
-  document.getElementById("myNav").style.height = "100%";
+// nav atas
+window.onscroll = function() {myFunction()};
+var navbar = document.getElementById("navAtas");
+var sticky = navbar.offsetTop;
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
 }
 
+// nav bawah
+function openNav() {
+  document.getElementById("navBawah").style.height = "100%";
+}
 function closeNav() {
-  document.getElementById("myNav").style.height = "0%";
+  document.getElementById("navBawah").style.height = "0%";
 }
 </script>
 </body>
