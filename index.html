@@ -22,7 +22,7 @@ img {
 
 /* nav atas */
 
-#navbar {
+#navAtas {
   overflow: hidden;
   background-color: #333;
 }
@@ -155,13 +155,13 @@ img {
 <script>
 // nav atas
 window.onscroll = function() {myFunction()};
-var navbar = document.getElementById("navAtas");
-var sticky = navbar.offsetTop;
+var navAtas = document.getElementById("navAtas");
+var sticky = navAtas.offsetTop;
 function myFunction() {
   if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
+    navAtas.classList.add("sticky")
   } else {
-    navbar.classList.remove("sticky");
+    navAtas.classList.remove("sticky");
   }
 }
 
