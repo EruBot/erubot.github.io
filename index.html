@@ -133,7 +133,9 @@ img {
   <a href="/">Home</a>
   <a href="//t.me/grup_anime_indo">Group</a>
   <a href="//t.me/jksubindo">Channel</a>
-  <a href="#"><span class="post-view" data-id="15032022"><span class="view-load" id="postviews"/> Users</span></a>
+</div>
+<div class="view-page">
+<span class="post-view" data-id="2653820288852374593"><i class="fa fa-user"/> <span class="view-load" id="postviews"><i class="fa fa-spinner fa-spin"/></span> Users</span>
 </div>
 <h1>ERRUUU</h1>
 <img class="w3-card-4" src="https://telegra.ph/file/aa009465a339e5b8e1daa.jpg"/>
@@ -173,8 +175,8 @@ function openNav() {
 function closeNav() {
   document.getElementById("navBawah").style.height = "0%";
 }
-
-// views
+</script>
+<script type="text/javascript">
 $.each($(".post-view[data-id]"), function(a, e) {
 var l = $(e).parent().find("#postviews").addClass("view-load"),
 i = new Firebase("https://kumapoi-default-rtdb.firebaseio.com/pages/id/" + $(e).attr("data-id"));
